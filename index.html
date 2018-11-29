@@ -9,80 +9,171 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <style>
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      
+}
       .parallax {
       background-image: url("http://lithosphears.com/wp-content/uploads/2018/10/Capture-8.jpg");
-      min-height: 410px; 
+      min-height: 300px; 
       /* Create the parallax scrolling effect */
       background-attachment: fixed;
       background-position: 50% 0%;
       background-repeat: no-repeat;
       background-size: cover;
       }
+      .dropbtn {
+    background-color: #006633;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3e8e41;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #4CAF50}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #4CAF50;
+}
    </style>
    </head>
-   <header role="banner" id="top" class="navbar navbar-static-top">
-      <nav role="navigation" class="navbar navbar-default">
-         <div class="container">
-            <div class="navbar-header">
-               <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <div class="animbrand"><a href="#" class="navbar-brand">MANE EXPERIENCE</a></div>
-            </div>
-            <div class="collapse navbar-collapse navbar-collapse">
-               <ul class="nav navbar-nav">
-                  <li class=""><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                  <li class="dropdown">
-                     <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-list-alt"></span> Events <b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-align-justify"></span> Events</a></li>
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-pencil"></span> Events listed by ID</a></li>
-                     </ul>
-                  </li>
-                  <li class="dropdown">
-                     <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-book"></span> Student Handbook » <b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-align-justify"></span> View Accounts</a></li>
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-pencil"></span> Add Account</a></li>
-                     </ul>
-                  </li>
-                  <li class="dropdown">
-                     <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-user"></span> Freshman Resources <b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-align-justify"></span> Student Engagement</a></li>
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-align-justify"></span> Financial Aid</a></li>
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-align-justify"></span> University Housing</a></li>
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-align-justify"></span> Dining Services</a></li>
-                        <li class=""><a href="#"><span class="glyphicon glyphicon-align-justify"></span> Center for Student Excellence</a></li>
-                     </ul>
-                  </li>
-               </ul>
-               <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                     <a data-toggle="dropdown" class="dropdown-toggle" >
-                     <span></span>
-                     <small>Welcome,</small>	User <b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
-                     </ul>
-                  </li>
+   <header>
+      <nav id="header-navbar" class="early-brk navbar navbar-default" ><a name="topOfPage"></a><div class="container_fluid top_nav center " style="background-color:#2C814D; height:100px;">
+            <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".header-collapse" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="http://www.southeastern.edu"><h1 style="margin:0;"><img src="http://www.southeastern.edu/_resources/img/southeastern-logo.png" alt="Southeastern Louisiana University, Hammond Louisiana" width="320px"></h1></a>
+</div>
+            <div class="collapse navbar-collapse header-collapse" >
+               <ul class="nav navbar-nav navbar-right" style="color:white;">
+                  <li><a style="color:white;" href="/apply/index.html">Apply</a></li>
+                  <li><a style="color:white;" href="/alumni_donors/alumni_assoc/index.html">Alumni</a></li>
+                  <li><a style="color:white;" href="/alumni_donors/foundation/index.html">Give</a></li>
+                  <li><a style="color:white;" href="#" id="chat_link" data-chat-id="stc">Chat</a></li>
+                  <li><a style="color:white;" href="/visit/index.html">Visit</a></li>
+                  <li><a style="color:white;" href="https://www2.southeastern.edu/helios">Calendar</a></li>
+                  <li><a style="color:white;" href="/myden/">My Den</a></li>
                </ul>
             </div>
          </div>
-      </nav>
-   </header>
+     
+      <div class="early-brk navbar-collapse collapse header-collapse" style="background-color:#006633;line-height:20px;" >
+         
+               
+         
+               <div class="animbrand"><a href="#" class="navbar-brand" style="color:gold;">MANE EXPERIENCE</a></div>
+           
+            <div class="collapse navbar-collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li class=""></li>
+                
+                 <div class="dropdown">
+                     <button class="dropbtn"> <a style="color:white;" href="#"><span class="glyphicon glyphicon-home"></span> Home</a></button>
+                     <div class="dropdown-content">
+                       
+
+                      </div>
+                  </div>
+                 <div class="dropdown">
+                     <button class="dropbtn"> <a style="color:white;" href="#"><span class="glyphicon glyphicon-book"></span>  Student Handbook </a></button>
+                     <div class="dropdown-content">
+                       
+
+                      </div>
+                  </div>
+                 <div class="dropdown">
+                     <button class="dropbtn">  
+                        <a data-toggle="dropdown" style="color:white;" class="dropdown-toggle" href="https://southeastern.edu/current_students/mane_exp/search/"><span class="glyphicon glyphicon-list-alt"></span> Events <b class="caret"></b></a>
+                     </button>
+                     <div class="dropdown-content">
+                     
+                        <a style="color:white;" href="https://southeastern.edu/current_students/mane_exp/search/?q=all_tracks"><span class="glyphicon glyphicon-align-justify"></span> All Tracks</a>
+                        <a style="color:white;" href="https://southeastern.edu/current_students/mane_exp/search/?q=academic_success"><span class="glyphicon glyphicon-align-justify"></span> Academic Success</a>
+                        <a style="color:white;" href="https://southeastern.edu/current_students/mane_exp/search/?q=personal_safety"><span class="glyphicon glyphicon-align-justify"></span> Personal Saftey And Wellness</a>
+                        <a style="color:white;" href="https://southeastern.edu/current_students/mane_exp/search/?q=student_engagement"><span class="glyphicon glyphicon-align-justify"></span> Student Engagement</a>
+                        <a style="color:white;" href="https://www.southeastern.edu/current_students/mane_exp/search/?q=lion_pride"><span class="glyphicon glyphicon-align-justify"></span> Lion Pride</a>
+                      </div>
+                  </div>
+                
+                  
+                  
+                  <div class="dropdown">
+                     <button class="dropbtn">
+                        <a data-toggle="dropdown" class="dropdown-toggle" style="color:white;" href="#"><span style="color:white;" class="glyphicon glyphicon-user"></span> Student Resources 
+                           <b class="caret"></b></a>
+                     </button>
+                     <div class="dropdown-content">
+                        <a style="color:white;" href="https://southeastern.edu/admin/ose/index.html"><span class="glyphicon glyphicon-align-justify"></span> Student Engagement</a>
+                        <a style="color:white;" href="https://southeastern.edu/admin/fin_aid/index.html"><span class="glyphicon glyphicon-align-justify"></span> Financial Aid</a>
+                        <a style="color:white;" href="https://southeastern.edu/admin/housing/index.html"><span class="glyphicon glyphicon-align-justify"></span> University Housing</a>
+                        <a style="color:white;" href="https://southeastern.edu/admin/dining/index.html"><span class="glyphicon glyphicon-align-justify"></span> Dining Services</a>
+                        <a style="color:white;" href="https://southeastern.edu/acad_research/programs/cse/index.html"><span class="glyphicon glyphicon-align-justify"></span> Center for Student Excellence</a>
+                        <a style="color:white;" href="https://southeastern.edu/campus_life/happenings/index.html"><span class="glyphicon glyphicon-align-justify"></span> Campus Happenings</a>
+                        <a style="color:white;" href="https://www.southeastern.edu/admin/campus_services/index.html"><span class="glyphicon glyphicon-align-justify"></span> Campus Services </a>
+                        <a style="color:white;" href="https://www.southeastern.edu/admin/tb_rental/index.html"><span class="glyphicon glyphicon-align-justify"></span> Textbook Rental </a>
+
+
+                      </div>
+                  </div>
+                     
+                   <div class="dropdown">
+                     <button class="dropbtn"> <a style="color:white;" href="https://southeastern.edu/map/index.html"><span class="glyphicon glyphicon-map-marker"></span>Campus Map</a></button>
+                     <div class="dropdown-content">
+                       
+
+                      </div>
+                  </div>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                     <a data-toggle="dropdown" style="color:white;" class="dropdown-toggle" >
+                     <span></span>
+                     <small>Welcome</small> </a>
+                     <ul class="dropdown-menu">
+                        <li><a style="color:white;" href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+      </div>
+     <div class="parallax" ></div>
+   </nav>
+  
+ </header>
    <body>
-      <div class="parallax" ></div>
+     
       <div class="container-fluid" style="padding-right: 15%; padding-left: 15%; padding-top:10px;">
          <div class="row">
             <div class="col-md-12">
                <div class="border border-dark">
                   <div class="jumbotron card card-block">
                      <hr>
-                     <h2 ">
+                     <h2 >
                         MANE EXPERIENCE
                      </h2>
                      <p>
@@ -91,7 +182,7 @@
                         Let the Mane Experience be your go-to website to find the various services, resources, and upcoming events important for a successful freshman year!  
                      </p>
                      <p>
-                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                        <a class="btn btn-primary btn-large" href="Descrip.html">Learn more</a>
                      </p>
                      <hr>
                   </div>
@@ -107,14 +198,15 @@
                         <hr>
                      </center>
                      <div class="row" style="border-radius: 2px; padding: 15px">
-                        <div class="col-md-4" style="border: 2px solid grey; border-radius: 2px; padding: 5px; height: 450px;">
+                        <div class="col-md-4" style="border: 2px solid grey; border-radius: 2px; padding: 5px; height: 100%;">
                            <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" style="width: 280px; height: 180px" alt="Bootstrap Thumbnail First" src="https://www.layoutit.com/img/people-q-c-600-200-1.jpg">
+                              <span class= "center">  <img class="card-img-top" style="width: 126%; height: 180px;" alt="Bootstrap Thumbnail First" src="https://southeastern.edu/current_students/mane_exp/images/mane-lion.jpg"></span>
+
                               <div class="card-block">
                                  <h5 class="card-title">
                                    <b> Major and Minor Fair</b>
                                  </h5>
-                                 <p class="card-text" style="width: 260px">
+                                 <p class="card-text" style="width:100% ">
                                     Tracks - Academic Success
                                     
                                     <br>
@@ -124,24 +216,25 @@
                                     <br>
 									<b>Description </b>- Did you know that MOST students don't graduate in their first major. Come check out what else SLU offers.
 									<br>
+                           <br>
 									
 									<b>Event Date/Time</b> - 12/25/2018 / 5:30 am
 									
                                  </p>
                                  <p>
-                                    <a class="btn btn-primary" href="http://selu.edu/this/aint/no/link/either">Learn More</a> 
+                                    <a class="btn btn-primary" href="https://southeastern.edu/current_students/mane_exp/search/">Learn More</a> 
                                  </p>
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-4" style="border-top: 2px solid grey; border-bottom: 2px solid grey; border-radius: 2px; padding: 5px;  height: 450px;" >
+                        <div class="col-md-4" style="border: 2px solid grey; border-radius: 2px; padding: 5px;  height: 100%;" >
                            <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" style="width: 280px; height: 180px" alt="Bootstrap Thumbnail Second" src="https://www.layoutit.com/img/city-q-c-600-200-1.jpg">
+                             <span class= "center"> <img class="card-img-top" style="width: 126%; height: 180px;" alt="Bootstrap Thumbnail Second" src="https://www.layoutit.com/img/city-q-c-600-200-1.jpg"></span>
                               <div class="card-block">
                                  <h5 class="card-title">
                                     <b> Lion Pride Preview </b>
                                  </h5>
-                                 <p class="card-text" style="width: 260px; ">
+                                 <p class="card-text" style="width:100%  ">
 
 									Tracks - Lion Pride
                                     
@@ -155,20 +248,21 @@
 									<br>
 									<b>Event Date/Time</b> - 11/17/2018 / 2:00 pm
 									
-                                 </p>
+                                  </p>
                                  <p>
-                                    <a class="btn btn-primary" href="http://selu.edu/temp/not/a/link">Learn More</a> 
+                                    <a class="btn btn-primary" href="https://southeastern.edu/current_students/mane_exp/search/">Learn More</a> 
+                                 </p>
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-4" style="border: 2px solid grey; border-radius: 2px; padding: 5px; height: 450px;">
+                        <div class="col-md-4" style="border: 2px solid grey; border-radius: 2px; padding: 5px; height: 100%;">
                            <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" style="width: 280px; height: 180px" alt="Bootstrap Thumbnail Third" src="https://www.layoutit.com/img/sports-q-c-600-200-1.jpg">
+                              <span class= "center">  <img class="card-img-top" style="width: 126%; height: 180px;" alt="Bootstrap Thumbnail Third" src="https://www.layoutit.com/img/sports-q-c-600-200-1.jpg"></span>
                               <div class="card-block">
                                  <h5 class="card-title">
                                     Title
                                  </h5>
-                                 <p class="card-text" style="width: 260px; ">
+                                 <p class="card-text" style="width:100% ">
                                  
 									Tracks - Lion Pride
                                     
@@ -182,9 +276,12 @@
 									<br>
 
 									<b>Event Date/Time</b> - 11/17/2018 / 2:00 pm
-                                 </p>
+                                 
+                                 
+                                      </p>
                                  <p>
-                                    <a class="btn btn-primary" href="#">Lean More</a> 
+                                    <a class="btn btn-primary" href="https://southeastern.edu/current_students/mane_exp/search/">Learn More</a> 
+                  
                                  </p>
                               </div>
                            </div>
